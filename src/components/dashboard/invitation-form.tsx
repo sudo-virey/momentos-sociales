@@ -30,23 +30,24 @@ interface InvitationFormProps {
 export function InvitationForm({ invitation, onSave, onPublish }: InvitationFormProps) {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
+  const invitationData = invitation?.data
   const [formData, setFormData] = useState<InvitationFormData>({
-    brideFirstName: invitation?.brideFirstName || '',
-    brideLastName: invitation?.brideLastName || '',
-    groomFirstName: invitation?.groomFirstName || '',
-    groomLastName: invitation?.groomLastName || '',
-    title: invitation?.title || 'Nuestra Boda',
-    parentsMessage: invitation?.parentsMessage || '',
-    eventDate: invitation?.eventDate || '',
-    eventTime: invitation?.eventTime || '',
-    ceremonyLocation: invitation?.ceremonyLocation || '',
-    ceremonyAddress: invitation?.ceremonyAddress || '',
-    receptionLocation: invitation?.receptionLocation || '',
-    receptionAddress: invitation?.receptionAddress || '',
-    coverPhoto: invitation?.coverPhoto || '',
-    galleryPhotos: invitation?.galleryPhotos || [],
-    giftRegistries: invitation?.giftRegistries || [],
-    personalMessage: invitation?.personalMessage || '',
+    brideFirstName: (invitationData?.brideFirstName as string) || '',
+    brideLastName: (invitationData?.brideLastName as string) || '',
+    groomFirstName: (invitationData?.groomFirstName as string) || '',
+    groomLastName: (invitationData?.groomLastName as string) || '',
+    title: (invitationData?.title as string) || 'Nuestra Boda',
+    parentsMessage: (invitationData?.parentsMessage as string) || '',
+    eventDate: (invitationData?.eventDate as string) || '',
+    eventTime: (invitationData?.eventTime as string) || '',
+    ceremonyLocation: (invitationData?.ceremonyLocation as string) || '',
+    ceremonyAddress: (invitationData?.ceremonyAddress as string) || '',
+    receptionLocation: (invitationData?.receptionLocation as string) || '',
+    receptionAddress: (invitationData?.receptionAddress as string) || '',
+    coverPhoto: (invitationData?.coverPhoto as string) || '',
+    galleryPhotos: (invitationData?.galleryPhotos as string[]) || [],
+    giftRegistries: (invitationData?.giftRegistries as GiftRegistry[]) || [],
+    personalMessage: (invitationData?.personalMessage as string) || '',
   })
 
   const updateField = <K extends keyof InvitationFormData>(
