@@ -16,9 +16,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'InvitaDigital - Invitaciones de Boda Digitales',
-  description: 'Crea invitaciones digitales elegantes para tu boda. Diseno moderno, RSVP integrado y facil de compartir.',
-  generator: 'v0.app',
+  title: 'Momentos Sociales - Invitaciones Digitales',
+  description: 'Crea invitaciones digitales elegantes para tus eventos. Diseno moderno, RSVP integrado y facil de compartir.',
+  generator: 'momentos-sociales',
   icons: {
     icon: [
       {
