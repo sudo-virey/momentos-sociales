@@ -3,7 +3,13 @@
 import Link from 'next/link'
 import { Plus, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Empty } from '@/components/ui/empty'
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyMedia,
+  EmptyTitle,
+} from '@/components/ui/empty'
 import { InvitationCard } from './invitation-card'
 import type { Invitation } from '@/types/invitation'
 
@@ -16,21 +22,21 @@ export function InvitationsList({ invitations, onDelete }: InvitationsListProps)
   if (invitations.length === 0) {
     return (
       <Empty>
-        <Empty.Icon>
+        <EmptyMedia variant="icon">
           <Mail className="size-10" />
-        </Empty.Icon>
-        <Empty.Title>No tienes invitaciones</Empty.Title>
-        <Empty.Description>
-          Crea tu primera invitacion digital y comparte este momento especial con tus seres queridos.
-        </Empty.Description>
-        <Empty.Actions>
+        </EmptyMedia>
+        <EmptyContent>
+          <EmptyTitle>No tienes invitaciones</EmptyTitle>
+          <EmptyDescription>
+            Crea tu primera invitacion digital y comparte este momento especial con tus seres queridos.
+          </EmptyDescription>
           <Button asChild>
             <Link href="/dashboard/invitations/new">
               <Plus className="mr-2 size-4" />
               Crear Invitacion
             </Link>
           </Button>
-        </Empty.Actions>
+        </EmptyContent>
       </Empty>
     )
   }
