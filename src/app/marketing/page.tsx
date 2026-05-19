@@ -20,7 +20,7 @@ export default function MarketingPage() {
           <Image src="/logo.png" alt="Momentos Sociales" width={200} height={50} className="object-contain" priority />
         </Link>
         <nav className="hidden md:flex gap-8 items-center">
-          <Link className="text-sm font-light text-white/90 hover:text-white transition-colors" href="/login?mode=register">Registrarse</Link>
+          <Link className="text-sm font-light text-white/90 hover:text-white transition-colors" href="/register?plan=esencial">Registrarse</Link>
           <Link href="/login?mode=login&plan=esencial" className="text-sm font-medium text-white hover:text-yellow-200">Iniciar Sesión</Link>
         </nav>
       </header>
