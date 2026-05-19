@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Share2, Palette, BellRing, PlayCircle } from 'lucide-react';
 import { Button } from '@/components/button';
+import { SiteFooter } from '@/components/site-footer';
 
 export default function MarketingPage() {
   return (
@@ -19,8 +20,8 @@ export default function MarketingPage() {
           <Image src="/logo.png" alt="Momentos Sociales" width={200} height={50} className="object-contain" priority />
         </Link>
         <nav className="hidden md:flex gap-8 items-center">
-          <Link className="text-sm font-light text-white/90 hover:text-white transition-colors" href="/login">Registrarse</Link>
-          <Link href="/login" className="text-sm font-medium text-white hover:text-yellow-200">Iniciar Sesión</Link>
+          <Link className="text-sm font-light text-white/90 hover:text-white transition-colors" href="/login?mode=register">Registrarse</Link>
+          <Link href="/login?mode=login&plan=esencial" className="text-sm font-medium text-white hover:text-yellow-200">Iniciar Sesión</Link>
         </nav>
       </header>
 
@@ -173,7 +174,9 @@ export default function MarketingPage() {
                   <li>✓ Confirmación directa a tu WhatsApp</li>
                 </ul>
               </div>
+              <Link href="/login?plan=esencial" className="w-full">
               <Button variant="outline" className="mt-8 w-full border-white/20 text-black hover:bg-white/10 transition-colors">Elegir Plan</Button>
+              </Link>
             </div>
 
             {/* Plan Premium */}
@@ -198,113 +201,7 @@ export default function MarketingPage() {
 
       </main>
 
-      {/* FOOTER PREMIUM */}
-      <footer className="relative z-10 border-t border-white/10 bg-black/80 backdrop-blur-md text-white py-16 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-
-          {/* Columna 1: Branding y Redes */}
-          <div className="space-y-4">
-            <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
-              <Image
-                src="/logo-icono.png"
-                alt="Momentos Sociales"
-                width={180}
-                height={45}
-                className="object-contain"
-              />
-            </Link>
-            <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs">
-              Elevando tus celebraciones con invitaciones digitales exclusivas, confirmación en tiempo real y elegancia sin esfuerzo.
-            </p>
-            <div className="flex gap-4 pt-2">
-              <a href="#" className="text-white/40 hover:text-yellow-200 transition-colors duration-300">
-                <Share2 className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/40 hover:text-yellow-200 transition-colors duration-300">
-                <Palette className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/40 hover:text-yellow-200 transition-colors duration-300">
-                <BellRing className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Columna 2: Plataforma */}
-          <div>
-            <h4 className="font-serif text-yellow-200 text-lg font-medium mb-4 tracking-wide">Plataforma</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="#caracteristicas" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Características
-                </Link>
-              </li>
-              <li>
-                <Link href="#ejemplos" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Galería de Diseños
-                </Link>
-              </li>
-              <li>
-                <Link href="#precios" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Planes y Precios
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Columna 3: Demos en Vivo */}
-          <div>
-            <h4 className="font-serif text-yellow-200 text-lg font-medium mb-4 tracking-wide">Colecciones</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/demo/boda" target="_blank" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Boda Luxury
-                </Link>
-              </li>
-              <li>
-                <Link href="/demo/xv-anos" target="_blank" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Gala XV Años
-                </Link>
-              </li>
-              <li>
-                <Link href="/demo/gala" target="_blank" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Cena de Gala
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Columna 4: Soporte y Legal */}
-          <div>
-            <h4 className="font-serif text-yellow-200 text-lg font-medium mb-4 tracking-wide">Soporte</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/faqs" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Preguntas Frecuentes
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacidad" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Aviso de Privacidad
-                </Link>
-              </li>
-              <li>
-                <Link href="/terminos" className="text-white/60 hover:text-yellow-200 text-sm font-light transition-colors duration-300">
-                  Términos de Servicio
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        {/* Barra Inferior de Derechos Reservados */}
-        <div className="max-w-7xl mx-auto border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-white/40 uppercase">
-          <p>© 2026 Momentos Sociales • Todos los derechos reservados.</p>
-          <p className="flex items-center gap-1 normal-case tracking-normal text-white/30 text-sm font-light">
-            Diseñado con elegancia para momentos inolvidables.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
