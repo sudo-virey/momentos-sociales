@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { AuthPage } from '@/components/auth/auth-page';
 
 type RegisterPageProps = {
   searchParams?: {
@@ -7,8 +7,5 @@ type RegisterPageProps = {
 };
 
 export default function RegisterPage({ searchParams }: RegisterPageProps) {
-  const plan = searchParams?.plan?.trim();
-  const target = plan ? `/login?mode=register&plan=${encodeURIComponent(plan)}` : '/login?mode=register';
-
-  redirect(target);
+  return <AuthPage mode="register" plan={searchParams?.plan} />;
 }
