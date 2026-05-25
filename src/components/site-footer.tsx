@@ -21,8 +21,8 @@ export function SiteFooter({ className, variant = 'marketing' }: SiteFooterProps
     : '#precios';
 
   return (
-    <footer className={className ?? 'relative z-10 border-t border-white/10 bg-black/80 backdrop-blur-md text-white py-16 px-6 lg:px-12'}>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+   
+      <footer className="relative z-10 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent pt-16 sm:pt-24"> <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
         <div className="space-y-4">
           <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
@@ -117,9 +117,7 @@ export function SiteFooter({ className, variant = 'marketing' }: SiteFooterProps
 
       <div className="max-w-7xl mx-auto border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-white/40 uppercase">
         <p>© 2026 Momentos Sociales • Todos los derechos reservados.</p>
-        <p className="flex items-center gap-1 normal-case tracking-normal text-white/30 text-sm font-light">
-          Diseñado con elegancia para momentos inolvidables.
-        </p>
+        
       </div>
     </footer>
   );
