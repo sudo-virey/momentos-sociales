@@ -1,11 +1,13 @@
 import { AuthPage } from '@/components/auth/auth-page';
 
 type RegisterPageProps = {
-  searchParams?: {
-    plan?: string;
-  };
+  searchParams?: Promise<{
+    template?: string;
+  }>;
 };
 
-export default function RegisterPage({ searchParams }: RegisterPageProps) {
-  return <AuthPage mode="register" plan={searchParams?.plan} />;
+export default async function RegisterPage({ searchParams }: RegisterPageProps) {
+  const params = await searchParams;
+
+  return <AuthPage mode="register" templateId={params?.template} />;
 }

@@ -1,12 +1,19 @@
 import { AuthPage } from '@/components/auth/auth-page';
 
 type LoginPageProps = {
-  searchParams?: {
+  searchParams?: Promise<{
     mode?: string;
-    plan?: string;
-  };
+    template?: string;
+  }>;
 };
 
-export default function LoginPage({ searchParams }: LoginPageProps) {
-  return <AuthPage mode={searchParams?.mode === 'register' ? 'register' : 'login'} plan={searchParams?.plan} />;
+export default async function LoginPage({ searchParams }: LoginPageProps) {
+  const params = await searchParams;
+
+  return (
+    <AuthPage
+      mode={params?.mode === 'register' ? 'register' : 'login'}
+      templateId={params?.template}
+    />
+  );
 }

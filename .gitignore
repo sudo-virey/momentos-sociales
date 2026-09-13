@@ -15,6 +15,9 @@
 
 # next.js
 /.next/
+/.next-codex/
+/.next-webpack/
+/.next-webpack-owned-by-pn/
 /out/
 
 # production
