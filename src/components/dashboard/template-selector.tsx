@@ -17,6 +17,7 @@ const categories = [
   { id: 'quinceanera', name: 'Quinceaneras' },
   { id: 'baby-shower', name: 'Baby Shower' },
   { id: 'birthday', name: 'Cumpleanos' },
+  { id: 'other', name: 'Gala y otros' },
 ] as const
 
 interface TemplateSelectorProps {
@@ -87,7 +88,7 @@ export function TemplateSelector({ onSelect, showLink = true }: TemplateSelector
                   {template.category === 'quinceanera' && 'XV Anos'}
                   {template.category === 'baby-shower' && 'Baby Shower'}
                   {template.category === 'birthday' && 'Cumpleanos'}
-                  {template.category === 'other' && 'Otro'}
+                  {template.category === 'other' && 'Gala'}
                 </Badge>
               </div>
             </CardHeader>

@@ -357,6 +357,245 @@ export const templates: InvitationTemplate[] = [
       },
     ],
   },
+  {
+    id: 'quinceanera-royal',
+    name: 'Royal Rose',
+    description: 'Diseno sofisticado en tonos rosa y dorado para XV anos elegantes.',
+    category: 'quinceanera',
+    thumbnail: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop',
+    previewImage: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&fit=crop',
+    theme: {
+      primaryColor: '#7c2d5b',
+      accentColor: '#d4af37',
+      fontFamily: 'Playfair Display',
+    },
+    fieldGroups: [
+      {
+        id: 'celebrant',
+        title: 'La Quinceanera',
+        fields: [
+          { id: 'name', name: 'name', label: 'Nombre de la Quinceanera', type: 'text', placeholder: 'Valentina Morales', required: true },
+          { id: 'ageTitle', name: 'ageTitle', label: 'Titulo principal', type: 'text', placeholder: 'Mis XV Anos', defaultValue: 'Mis XV Anos' },
+          { id: 'personalMessage', name: 'personalMessage', label: 'Mensaje especial', type: 'textarea', placeholder: 'Me encantaria compartir esta noche tan especial contigo...' },
+        ],
+      },
+      {
+        id: 'family',
+        title: 'Familia y Padrinos',
+        fields: [
+          { id: 'parents', name: 'parents', label: 'Padres', type: 'textarea', placeholder: 'Nombre de los padres', required: true },
+          { id: 'godparents', name: 'godparents', label: 'Padrinos', type: 'textarea', placeholder: 'Nombre de los padrinos' },
+        ],
+      },
+      {
+        id: 'event',
+        title: 'Ceremonia y Recepcion',
+        fields: [
+          { id: 'eventDate', name: 'eventDate', label: 'Fecha', type: 'date', required: true },
+          { id: 'massTime', name: 'massTime', label: 'Hora de misa', type: 'time' },
+          { id: 'partyTime', name: 'partyTime', label: 'Hora de recepcion', type: 'time', required: true },
+          { id: 'churchName', name: 'churchName', label: 'Iglesia', type: 'text', placeholder: 'Parroquia San Jose' },
+          { id: 'venueName', name: 'venueName', label: 'Salon', type: 'text', placeholder: 'Salon Imperial', required: true },
+          { id: 'venueAddress', name: 'venueAddress', label: 'Direccion del salon', type: 'text', required: true },
+        ],
+      },
+      {
+        id: 'style',
+        title: 'Estilo del evento',
+        fields: [
+          { id: 'colorScheme', name: 'colorScheme', label: 'Colores', type: 'text', placeholder: 'Rosa, vino y dorado' },
+          { id: 'dressCode', name: 'dressCode', label: 'Codigo de vestimenta', type: 'select', options: [
+            { value: 'formal', label: 'Formal' },
+            { value: 'black-tie', label: 'Etiqueta' },
+            { value: 'themed', label: 'Tematico' },
+          ]},
+          { id: 'coverPhoto', name: 'coverPhoto', label: 'Foto principal', type: 'url' },
+          { id: 'galleryPhotos', name: 'galleryPhotos', label: 'Galeria', type: 'gallery' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'baby-shower-clouds',
+    name: 'Nubes Suaves',
+    description: 'Plantilla delicada para baby shower con tonos suaves y detalles tiernos.',
+    category: 'baby-shower',
+    thumbnail: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=400&h=300&fit=crop',
+    previewImage: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=800&h=600&fit=crop',
+    theme: {
+      primaryColor: '#6f8fa3',
+      accentColor: '#f2c6a0',
+      fontFamily: 'Inter',
+    },
+    fieldGroups: [
+      {
+        id: 'parents',
+        title: 'Familia',
+        fields: [
+          { id: 'motherName', name: 'motherName', label: 'Nombre de la Mama', type: 'text', placeholder: 'Sofia', required: true },
+          { id: 'fatherName', name: 'fatherName', label: 'Nombre del Papa', type: 'text', placeholder: 'Daniel' },
+          { id: 'babyName', name: 'babyName', label: 'Nombre del Bebe', type: 'text', placeholder: 'Si ya lo saben' },
+        ],
+      },
+      {
+        id: 'event',
+        title: 'Detalles del Baby Shower',
+        fields: [
+          { id: 'eventDate', name: 'eventDate', label: 'Fecha', type: 'date', required: true },
+          { id: 'eventTime', name: 'eventTime', label: 'Hora', type: 'time', required: true },
+          { id: 'venue', name: 'venue', label: 'Lugar', type: 'text', placeholder: 'Jardin Las Nubes', required: true },
+          { id: 'venueAddress', name: 'venueAddress', label: 'Direccion', type: 'text', required: true },
+          { id: 'hostedBy', name: 'hostedBy', label: 'Organizado por', type: 'text', placeholder: 'Familia y amigas' },
+        ],
+      },
+      {
+        id: 'details',
+        title: 'Detalles para invitados',
+        fields: [
+          { id: 'colorScheme', name: 'colorScheme', label: 'Colores sugeridos', type: 'text', placeholder: 'Azul cielo y beige' },
+          { id: 'giftMessage', name: 'giftMessage', label: 'Mensaje de regalos', type: 'textarea', placeholder: 'Agradecemos regalos en talla 6-12 meses...' },
+          { id: 'giftRegistries', name: 'giftRegistries', label: 'Mesa de regalos', type: 'gift-registry' },
+          { id: 'coverPhoto', name: 'coverPhoto', label: 'Foto principal', type: 'url' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'birthday-stream',
+    name: 'Stream Party',
+    description: 'Diseno divertido para cumpleanos infantiles con estilo gamer y dinamico.',
+    category: 'birthday',
+    thumbnail: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop',
+    previewImage: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop',
+    theme: {
+      primaryColor: '#131313',
+      accentColor: '#55ea4d',
+      fontFamily: 'Inter',
+    },
+    fieldGroups: [
+      {
+        id: 'celebrant',
+        title: 'Festejado',
+        fields: [
+          { id: 'name', name: 'name', label: 'Nombre', type: 'text', placeholder: 'Cristian Manuel', required: true },
+          { id: 'age', name: 'age', label: 'Edad', type: 'number', placeholder: '7' },
+          { id: 'nickname', name: 'nickname', label: 'Nickname o tema', type: 'text', placeholder: 'ChuyMine' },
+        ],
+      },
+      {
+        id: 'event',
+        title: 'Mision principal',
+        fields: [
+          { id: 'eventDate', name: 'eventDate', label: 'Fecha', type: 'date', required: true },
+          { id: 'eventTime', name: 'eventTime', label: 'Hora', type: 'time', required: true },
+          { id: 'venue', name: 'venue', label: 'Lugar', type: 'text', placeholder: 'Escuela Primaria Ignacio Lopez Rayon', required: true },
+          { id: 'venueAddress', name: 'venueAddress', label: 'Direccion', type: 'text', required: true },
+        ],
+      },
+      {
+        id: 'party',
+        title: 'Fiesta',
+        fields: [
+          { id: 'partyTheme', name: 'partyTheme', label: 'Tema de la fiesta', type: 'text', placeholder: 'Minecraft, videojuegos, stream' },
+          { id: 'dressCode', name: 'dressCode', label: 'Disfraz o vestimenta', type: 'text', placeholder: 'Playera verde o disfraz gamer' },
+          { id: 'personalMessage', name: 'personalMessage', label: 'Mensaje', type: 'textarea', placeholder: 'Ven a completar esta mision conmigo...' },
+          { id: 'coverPhoto', name: 'coverPhoto', label: 'Imagen principal', type: 'url' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'birthday-confetti',
+    name: 'Confetti',
+    description: 'Plantilla colorida para cumpleanos con datos claros y confirmacion facil.',
+    category: 'birthday',
+    thumbnail: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=300&fit=crop',
+    previewImage: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&h=600&fit=crop',
+    theme: {
+      primaryColor: '#e17055',
+      accentColor: '#f6c453',
+      fontFamily: 'Inter',
+    },
+    fieldGroups: [
+      {
+        id: 'celebrant',
+        title: 'Festejado',
+        fields: [
+          { id: 'name', name: 'name', label: 'Nombre', type: 'text', placeholder: 'Camila', required: true },
+          { id: 'age', name: 'age', label: 'Edad', type: 'number', placeholder: '30' },
+          { id: 'title', name: 'title', label: 'Titulo de la invitacion', type: 'text', placeholder: 'Mi cumpleanos', defaultValue: 'Mi cumpleanos' },
+        ],
+      },
+      {
+        id: 'event',
+        title: 'Detalles de la fiesta',
+        fields: [
+          { id: 'eventDate', name: 'eventDate', label: 'Fecha', type: 'date', required: true },
+          { id: 'eventTime', name: 'eventTime', label: 'Hora', type: 'time', required: true },
+          { id: 'venue', name: 'venue', label: 'Lugar', type: 'text', required: true },
+          { id: 'venueAddress', name: 'venueAddress', label: 'Direccion', type: 'text', required: true },
+        ],
+      },
+      {
+        id: 'details',
+        title: 'Detalles adicionales',
+        fields: [
+          { id: 'partyTheme', name: 'partyTheme', label: 'Tema', type: 'text', placeholder: 'Disco, brunch, neon...' },
+          { id: 'dressCode', name: 'dressCode', label: 'Codigo de vestimenta', type: 'text', placeholder: 'Casual colorido' },
+          { id: 'personalMessage', name: 'personalMessage', label: 'Mensaje', type: 'textarea', placeholder: 'Me encantaria celebrar contigo...' },
+          { id: 'coverPhoto', name: 'coverPhoto', label: 'Foto principal', type: 'url' },
+          { id: 'galleryPhotos', name: 'galleryPhotos', label: 'Galeria', type: 'gallery' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'gala-onyx',
+    name: 'Onyx Black Tie',
+    description: 'Plantilla sobria para cenas de gala, premiaciones y eventos formales.',
+    category: 'other',
+    thumbnail: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=400&h=300&fit=crop',
+    previewImage: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=800&h=600&fit=crop',
+    theme: {
+      primaryColor: '#09090b',
+      accentColor: '#d97706',
+      fontFamily: 'Inter',
+    },
+    fieldGroups: [
+      {
+        id: 'host',
+        title: 'Anfitrion',
+        fields: [
+          { id: 'hostName', name: 'hostName', label: 'Anfitrion o empresa', type: 'text', placeholder: 'Grupo Horizonte', required: true },
+          { id: 'title', name: 'title', label: 'Titulo del evento', type: 'text', placeholder: 'Cena de Gala & Premiacion 2026', required: true },
+          { id: 'personalMessage', name: 'personalMessage', label: 'Mensaje de invitacion', type: 'textarea', placeholder: 'Tenemos el honor de invitarle a nuestra velada anual...' },
+        ],
+      },
+      {
+        id: 'event',
+        title: 'Evento',
+        fields: [
+          { id: 'eventDate', name: 'eventDate', label: 'Fecha', type: 'date', required: true },
+          { id: 'eventTime', name: 'eventTime', label: 'Hora de recepcion', type: 'time', required: true },
+          { id: 'venue', name: 'venue', label: 'Lugar', type: 'text', placeholder: 'Salon Onyx, Grand Hyatt', required: true },
+          { id: 'venueAddress', name: 'venueAddress', label: 'Direccion', type: 'text', required: true },
+        ],
+      },
+      {
+        id: 'access',
+        title: 'Acceso y protocolo',
+        fields: [
+          { id: 'dressCode', name: 'dressCode', label: 'Codigo de vestimenta', type: 'select', options: [
+            { value: 'black-tie', label: 'Black Tie / Etiqueta' },
+            { value: 'formal', label: 'Formal' },
+            { value: 'cocktail', label: 'Coctel' },
+          ]},
+          { id: 'accessNote', name: 'accessNote', label: 'Nota de acceso', type: 'textarea', placeholder: 'Pase personal e intransferible' },
+          { id: 'coverPhoto', name: 'coverPhoto', label: 'Imagen principal', type: 'url' },
+        ],
+      },
+    ],
+  }
 ]
 
 export function getTemplateById(id: string): InvitationTemplate | undefined {

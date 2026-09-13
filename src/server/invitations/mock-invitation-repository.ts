@@ -182,6 +182,11 @@ export function getInvitationDisplayName(invitation: Invitation): string {
   if (data.motherName) {
     return `Baby Shower de ${data.motherName}`
   }
+
+  // Formal event / gala
+  if (data.hostName && data.title) {
+    return data.title as string
+  }
   
   return 'Sin nombre'
 }
@@ -192,8 +197,13 @@ export function getTemplateCategoryLabel(templateId: string): string {
     'wedding-classic': 'Boda Clasica',
     'wedding-modern': 'Boda Moderna',
     'quinceanera': 'XV Anos',
+    'quinceanera-royal': 'XV Anos',
     'baby-shower': 'Baby Shower',
+    'baby-shower-clouds': 'Baby Shower',
     'birthday': 'Cumpleanos',
+    'birthday-stream': 'Cumpleanos',
+    'birthday-confetti': 'Cumpleanos',
+    'gala-onyx': 'Gala',
   }
   return categories[templateId] || 'Evento'
 }
