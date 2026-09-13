@@ -7,4 +7,4 @@ export {
   getTemplateCategoryLabel,
   publishInvitation,
   updateInvitation,
-} from '@/server/invitations'
+} from './mock-invitation-repository'

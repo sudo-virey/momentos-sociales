@@ -4,23 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, Check, Eye, Lock, Mail, PartyPopper, Sparkles, User } from 'lucide-react'
 import { Button } from '@/components/button'
+import { selectedDesignNames } from '@/features/templates/catalog-designs'
 import { SiteFooter } from '../site-footer'
 
 type AuthPageProps = {
   mode: 'login' | 'register'
   templateId?: string
-}
-
-const selectedDesignNames: Record<string, string> = {
-  'wedding-classic': 'Romance clásico',
-  'wedding-modern': 'Minimal dorado',
-  quinceanera: 'Noche de ensueño',
-  'quinceanera-royal': 'Royal rose',
-  'baby-shower': 'Dulce espera',
-  'baby-shower-clouds': 'Nubes suaves',
-  'birthday-stream': 'Stream party',
-  'birthday-confetti': 'Confetti',
-  'gala-onyx': 'Onyx black tie',
 }
 
 const highlights = [
