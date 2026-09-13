@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  distDir: '.next-codex',
+  distDir: process.env.NODE_ENV === 'development' ? '.next-codex' : '.next',
   reactCompiler: true,
   images: {
     remotePatterns: [
